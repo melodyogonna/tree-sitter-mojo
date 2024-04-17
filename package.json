@@ -1,0 +1,50 @@
+{
+  "name": "tree-sitter-mojo",
+  "version": "0.1.0",
+  "description": "Treesitter grammar for Mojo Programming Language",
+  "main": "index.js",
+  "types": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tree-sitter generate",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "keywords": [
+    "treesitter",
+    "mojo"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "author": "Melody Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "tree-sitter-cli": "^0.22.2",
+    "node-gyp-build": "^4.8.0",
+    "node-addon-api": "^7.1.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.0"
+  },
+  "tree-sitter": [
+    {
+      "file-types": [
+        "mojo"
+      ]
+    }
+  ]
+}
